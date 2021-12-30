@@ -1,0 +1,199 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef1"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000003MjF1AAK"
+                },
+                "AboutMe": null,
+                "Id": "0055j000003MjF1AAK"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000FRzt2AAD"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef2"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000002pv6aAAA"
+                },
+                "AboutMe": null,
+                "Id": "0055j000002pv6aAAA"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000EsangAAB"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef3"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000002pv6aAAA"
+                },
+                "AboutMe": null,
+                "Id": "0055j000002pv6aAAA"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000EsanhAAB"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef4"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000002pv6aAAA"
+                },
+                "AboutMe": null,
+                "Id": "0055j000002pv6aAAA"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000EsaniAAB"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef5"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000002pv6aAAA"
+                },
+                "AboutMe": null,
+                "Id": "0055j000002pv6aAAA"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000EsanjAAB"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef6"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000002pv6aAAA"
+                },
+                "AboutMe": null,
+                "Id": "0055j000002pv6aAAA"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000EsankAAB"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef7"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000002pv6aAAA"
+                },
+                "AboutMe": null,
+                "Id": "0055j000002pv6aAAA"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000EsanlAAB"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef8"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000002pv6aAAA"
+                },
+                "AboutMe": null,
+                "Id": "0055j000002pv6aAAA"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000EsanmAAB"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef9"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000002pv6aAAA"
+                },
+                "AboutMe": null,
+                "Id": "0055j000002pv6aAAA"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000EsannAAB"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef10"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000002pv6aAAA"
+                },
+                "AboutMe": null,
+                "Id": "0055j000002pv6aAAA"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000EsanoAAB"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef11"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000002pv6aAAA"
+                },
+                "AboutMe": null,
+                "Id": "0055j000002pv6aAAA"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000EsanpAAB"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef12"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000002pv6aAAA"
+                },
+                "AboutMe": null,
+                "Id": "0055j000002pv6aAAA"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000EsanqAAB"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef13"
+            },
+            "Owner": {
+                "attributes": {
+                    "type": "User",
+                    "url": "/services/data/v50.0/sobjects/User/0055j000002pv6aAAA"
+                },
+                "AboutMe": null,
+                "Id": "0055j000002pv6aAAA"
+            },
+            "PhotoUrl": "/services/images/photo/0015j00000EsanrAAB"
+        }
+    ]
+}
