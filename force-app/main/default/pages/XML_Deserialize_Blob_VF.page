@@ -1,0 +1,13 @@
+<apex:page controller="XML_Deserialize_Blob">
+    <apex:messages />
+    <apex:form >
+        
+        <apex:pageBlock title="Upload Data" >
+            
+            <apex:pageBlockSection title="data">
+                <apex:inputFile value="{!xmlFile}"></apex:inputFile>
+                <apex:commandButton value="Upload" action="{!parseData}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page controller="XML_deserialize">
+    <apex:form >
+        <apex:pageBlock title="XML Deserialize" >
+            <apex:panelGrid columns="4" width="800" id="grid">
+                <apex:inputTextarea value="{!xmlString}" cols="65" rows="10" />
+                <apex:panelGrid columns="1" width="22">
+                    <apex:commandButton value=" Convert " action="{!parseString}" reRender="grid"/>
+                    <apex:commandButton value=" Clear " action="{!clearText}" reRender="grid" />
+                </apex:panelGrid>
+                <apex:inputTextarea value="{!parsedString}" cols="65" rows="10"/>
+            </apex:panelGrid>
+            
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

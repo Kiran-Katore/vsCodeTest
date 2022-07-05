@@ -1,0 +1,24 @@
+<apex:page controller="SendAttachment">
+    <apex:form >
+        <apex:pageBlock title="Mailer">
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Mail ID:"/>
+                    <apex:inputText value="{!tomail}" size="80" html-placeholder="Email"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="subject :"/>
+                    <apex:inputText value="{!subject}" size="80" html-placeholder="Subject"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem > 
+                    <apex:outputLabel value="body :"/>
+                    <apex:inputTextArea value="{!body}" rows="10" cols="80" html-placeholder="Body"/>
+                    
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Send" action="{!sendMail}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

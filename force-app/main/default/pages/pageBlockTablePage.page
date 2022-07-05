@@ -1,0 +1,26 @@
+<apex:page sidebar="false" controller="pageBlockController"  readOnly="true">
+    <apex:SectionHeader title="All Accounts"/>
+    <apex:form >
+    <apex:PageMessages id="msg" ></apex:PageMessages>
+    <apex:pageBlock >
+         <apex:pageBlockSection columns="5">
+             <apex:pageBlockSectionItem >
+             <b>Enter Name :</b><apex:inputText value="{!searchKey}" html-placeholder="Enter Name" required="true"/>
+             </apex:pageBlockSectionItem>
+             
+             <apex:commandButton value="Search" action="{!searchRecord}" reRender="recs, msg"/>
+         </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+    <apex:pageBlock title="Accounts ({!lst.size})" id="recs">
+        
+        <apex:pageBlockTable value="{!lst}" var="acc">
+            <apex:column headerValue="Account Link">
+                <apex:outputLink value="/{!acc.id}" target="_blank">{!acc.name}</apex:outputLink>
+            </apex:column>
+            <apex:column value="{!acc.name}"/>
+            <apex:column value="{!acc.Industry}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

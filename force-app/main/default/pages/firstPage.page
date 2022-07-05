@@ -1,0 +1,52 @@
+<apex:page standardController="Account" tabStyle="Candidates__tab">
+  <apex:SectionHeader title="Candidate Info" subtitle="New Candidate"/>
+  
+  <!--
+      <apex:pageBlock title="Candidate Details" id="cand_details" helpTitle="Want Help?" helpUrl="google.com" >
+      
+          <apex:pageBlockButtons title="Operations" location="Top">
+              <apex:commandButton value="Save" action="{!save}"/>
+              <apex:commandButton value="Cancel" action="{!cancel}"/>
+          </apex:pageBlockButtons>
+      
+          <apex:pageBlockSection title="Personal Information" columns="2">
+              <apex:inputField value="{!Account.name}"/>
+              <apex:inputField value="{!Account.rating}"/>
+              <apex:inputField value="{!Account.phone}" required="true"/>
+              <apex:inputField value="{!Account.Industry}"/>
+              <apex:inputField value="{!Account.billingCity}"/>
+              <apex:inputField value="{!Account.billingStreet}"/>
+              <apex:inputField value="{!Account.billingCountry}"/>
+              <apex:inputField value="{!Account.rating}"/>
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Professional Information" columns="2">
+              <apex:inputField value="{!Account.Industry}"/>
+              <apex:inputField value="{!Account.billingCity}"/>
+              <apex:inputField value="{!Account.billingStreet}"/>
+              <apex:inputField value="{!Account.billingCountry}"/>
+              <apex:inputField value="{!Account.rating}"/>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Documents" columns="2">
+              <apex:inputField value="{!Account.Industry}"/>
+              <apex:inputField value="{!Account.billingCity}"/>
+              <apex:inputField value="{!Account.billingStreet}"/>
+              <apex:inputField value="{!Account.billingCountry}"/>
+              <apex:inputField value="{!Account.rating}"/>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+      -->
+      <apex:pageBlock title="Detail View">
+          
+          <apex:tabPanel selectedTab="Acs" switchType="ajax">
+              <apex:tab label="Account Details" name="Acs">
+                  <apex:detail inlineEdit="true" relatedList="false" title="true"/>
+              </apex:tab>
+              <apex:tab label="Contacts" Name="Cnts">
+                  <apex:relatedList list="Contacts"/>
+              </apex:tab>
+          </apex:tabPanel>
+      </apex:pageBlock>
+  
+  
+</apex:Page>

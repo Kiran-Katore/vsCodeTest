@@ -1,0 +1,83 @@
+<apex:page controller="Test_VF_Controller" action="{!save}" readOnly="true">
+    <apex:messages />
+    <apex:form >
+        <apex:variable value="{!0}" var="index"/>
+        
+        <apex:pageBlock >
+            <!--
+<apex:pageBlockTable value="{!records}" var="acc">
+<apex:column headerValue="Sr. No">
+<apex:variable value="{!index+1}" var="index"/>
+{!index}
+</apex:column>
+<apex:column headerValue="ID">
+<apex:outputField value="{!acc.id}"/>
+</apex:column>
+<apex:column headerValue="First">
+<apex:outputField value="{!acc.firstName}"/>
+</apex:column>
+<apex:column headerValue="Last">
+<apex:outputField value="{!acc.LastName}"/>
+</apex:column>
+<apex:column headerValue="Email">
+<apex:outputField value="{!acc.email}"/>
+</apex:column>
+<apex:column headerValue="Phone">
+<apex:outputField value="{!acc.phone}"/>
+</apex:column>
+</apex:pageBlockTable>
+-->
+            <apex:dataTable value="{!records}" var="acc" styleClass="tableClass" rowClasses="odd,even">
+                <apex:column headerValue="TESTID">
+                    <apex:facet name="header">Test</apex:facet>
+                    <apex:facet name="footer"> END</apex:facet>
+                    <apex:outputField value="{!acc.id}"/>
+                </apex:column>
+                <table class="tableClass" id="thePage:theTable" border="0" cellpadding="0" cellspacing="0">
+
+    <colgroup span="2"></colgroup>
+    <caption>table caption</caption>
+    <thead>
+        <tr>
+            <td colspan="2" scope="colgroup">table header</td>
+        </tr>
+
+        <tr>
+            <td scope="col">Name</td>
+            <td scope="col">Owner</td>
+        </tr>
+    </thead>
+
+    <tfoot>
+        <tr>
+            <td scope="col">column footer</td>
+            <td scope="col">column footer</td>
+        </tr>
+        <tr>
+            <td colspan="2" scope="colgroup">table footer</td>
+        </tr>
+    </tfoot>
+
+    <tbody>
+        <tr class="odd">
+            <td>Bass Manufacturing</td>
+            <td>Doug Chapman</td>
+        </tr>
+
+        <tr class="even">
+            <td>Ball Corp</td>
+            <td>Alan Ball</td>
+        </tr>
+
+        <tr class="odd">
+            <td>Wessler Co.</td>
+            <td>Jill Wessler</td>
+        </tr>
+    </tbody>
+
+</table>
+                
+            </apex:dataTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

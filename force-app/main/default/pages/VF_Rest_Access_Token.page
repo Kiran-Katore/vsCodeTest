@@ -1,0 +1,30 @@
+<apex:page controller="Rest_Access_Token">
+    <apex:sectionHeader title="Get Access Token"/>
+    <apex:form >
+        <apex:pageBlock title="Token">
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Endpoint: "><apex:inputText value="{!endpoint}"/></apex:outputLabel> 
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Client ID: "><apex:inputText value="{!client_id}"/></apex:outputLabel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Client_secret: "><apex:inputText value="{!client_secret}"/></apex:outputLabel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Username: "><apex:inputText value="{!username}"/></apex:outputLabel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Password: "><apex:inputText value="{!password}"/></apex:outputLabel>
+                </apex:pageBlockSectionItem>
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                    <apex:commandButton value="Get Token" action="{!getToken}"/>
+                </apex:pageBlockButtons>
+            <apex:outputText label="Token" value="{!token}"></apex:outputText>
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

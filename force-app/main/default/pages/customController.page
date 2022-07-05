@@ -1,0 +1,12 @@
+<apex:page controller="customPageController">
+    <apex:sectionHeader title="Basic Employee Information" subtitle="{!Emp_Code}"/>
+    <apex:pageBlock title="Information">
+        <apex:PageBlockSection >
+            <h2> Employee Code : "{!Emp_Code}" </h2> <br/>
+            <h2> Employee Name : {!Emp_name} </h2> <br/>
+            <h2> Employee Company : {!Emp_company} </h2> <br/>
+            <h2> Employee Phone Number : {!Emp_phone} </h2> <br/>
+            <h2> Employee City : {!Emp_city} </h2> <br/>
+        </apex:PageBlockSection>
+    </apex:pageBlock>
+</apex:page>

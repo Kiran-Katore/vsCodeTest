@@ -1,0 +1,19 @@
+<apex:page standardController="Account" extensions="visualforceExtensionController">
+    <apex:sectionHeader title="Create New Account"/>
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageMessages ></apex:pageMessages>
+    	<apex:pageBlockSection >
+        	<apex:inputField value="{!account.name}"/>
+             <apex:inputField value="{!account.phone}"/>
+            <apex:inputField value="{!account.Industry}"/>
+            <apex:inputField value="{!account.Active__c}"/>
+            <apex:inputField value="{!account.rating}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons >
+        	<apex:commandButton value="Save" action="{!insertRecord}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>
