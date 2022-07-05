@@ -1,0 +1,13 @@
+<apex:page controller="JSONGenerator_controller" sidebar="false" showHeader="false">
+    <apex:form >
+        <apex:pageBlock title="JSON Generator"> 
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Save"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Account Create">
+                <apex:inputField value="{!acc.name}"/>
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

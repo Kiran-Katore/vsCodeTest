@@ -1,0 +1,23 @@
+<apex:page >
+    <script>
+    	function callMeth(){
+            var a = document.getElementById('{!$Component.form_tag.pb.a}');
+            console.log("value"+a);
+        }
+    </script>
+    <apex:sectionHeader title="Javascript"/>
+    <apex:form id="form_tag">
+        <p id = "p_tag">
+            Test
+        </p>
+        
+        <apex:pageBlock id="pb">
+            <apex:inputText label="Enter Value:" id="a"/>
+            <apex:inputText label="Enter Sec Value: " id="b"/>
+            <apex:commandButton value="calculate" oncomplete="callMeth()" />
+            <apex:outputText label="Result: " />
+        </apex:pageBlock>
+    </apex:form>
+
+
+</apex:page>

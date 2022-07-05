@@ -1,0 +1,20 @@
+<apex:page standardController="Account" recordSetVar="acc">
+    <apex:sectionHeader title="Standard Controller"/>
+    <apex:form >
+    <apex:pageBlock id="block">
+        <apex:selectList value="{!filterid}" size="1">
+        	<apex:selectOptions value="{!listViewOptions}">
+            	
+            </apex:selectOptions>
+            <apex:actionSupport event="onchange" reRender="block"/>
+        </apex:selectList>
+    	<apex:pageBlockTable value="{!acc}" var="a">
+        	<apex:column headerValue="Record Name">
+                <apex:outputLink value="/{!a.id}">{!a.name}</apex:outputLink>
+            </apex:column>
+            <apex:column value="{!a.rating}"/>
+            <apex:column value="{!a.phone}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+        </apex:form>
+</apex:page>

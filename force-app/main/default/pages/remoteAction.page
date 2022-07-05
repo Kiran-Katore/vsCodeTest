@@ -1,0 +1,31 @@
+<apex:page controller="remoteActionController">
+  <script>
+      function getRecs(){
+          callMeth();
+          alert('called');
+      }
+  
+  </script>
+  
+  <apex:form >
+  <apex:actionFunction name="callMeth" action="{!records}" rerender="block"/>
+  <apex:pageBlock >
+  
+      <apex:pageBlockSection title="Search">
+          <input type = "text" label = "name" placeholder="name" value="{!searchKey}" />
+          <button onclick ="getRecs()">Search</button>
+      </apex:pageBlockSection>
+      
+  
+  </apex:pageBlock>
+  </apex:form>
+  <apex:pageBlock title="{!searchKey}">
+      <apex:pageBlockSection id="block" title="{!searchKey}">
+          {!searchKey}
+      </apex:pageBlockSection>
+  
+  </apex:pageBlock>
+  
+  
+  
+</apex:page>

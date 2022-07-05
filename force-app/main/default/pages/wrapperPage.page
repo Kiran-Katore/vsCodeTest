@@ -1,0 +1,40 @@
+<apex:page sidebar="false" showHeader="false" controller="wrapper_controller" tabStyle="candidates__tab" >
+    <apex:sectionHeader title="Wrapper Class" subtitle="Demo"/>
+    <apex:pageBlock title="Records">
+        <apex:form >
+            <apex:pageBlockSection title="Search Bar" columns="3">
+                
+                    <apex:inputText label="Search Bar: " html-placeholder="Enter Record Name" value="{!searchKey}"/>
+                    <apex:commandButton value="Search" action="{!searchRecs}" reRender="accounts, contacts"/>
+                
+            </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Accounts" columns="1" id="accounts">
+            <apex:pageBlockTable value="{!recs.accs}" var="acc">
+                <apex:column headerValue="id">
+                    <apex:outputLink value="/{!acc.id}" target="_blank">
+                        {!acc.id}
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column value="{!acc.name}"/>
+                <apex:column value="{!acc.phone}"/>
+                <apex:column value="{!acc.billingCity}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+            
+        <apex:pageBlockSection title="Contacts" columns="1" id="contacts">
+            <apex:pageBlockTable value="{!recs.cons}" var="con">
+                <apex:column headerValue="id">
+                    <apex:outputLink value="/{!con.id}" target="_blank">
+                        {!con.id}
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column value="{!con.firstName}"/>
+                <apex:column value="{!con.lastName}"/>
+                <apex:column value="{!con.phone}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:form>
+    </apex:pageBlock>
+  
+</apex:page>

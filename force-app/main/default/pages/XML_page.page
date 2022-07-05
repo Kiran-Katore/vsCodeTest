@@ -1,0 +1,5 @@
+<apex:page controller="XML_Practice" action="{!accountXML}">
+    <h1>
+        {!out_xml}
+    </h1>
+</apex:page>

@@ -1,0 +1,22 @@
+<apex:page controller="XML_utrace">
+    <apex:form >
+        <apex:pageBlock title="Utrace">
+            <apex:panelGrid columns="3">
+                <apex:inputText value="{!ip_address}" label="IP" id="input"/>
+                <apex:commandButton value="Search" action="{!utrace}" />
+                <apex:commandButton value="Clear" action="{!clear}" reRender="result, input"/>
+            </apex:panelGrid> 
+        </apex:pageBlock>
+        <apex:pageBlock >
+            <apex:variable var="i" value="{!1}"/>
+           
+                <apex:pageBlockTable columns="2" value="{!out_table}" var="key">
+                    <apex:column headerValue="Sr. No">{!i}<apex:variable var="i" value="{!i+1}"/></apex:column>
+                        <apex:column value="{!key}" headerValue="ID"/>
+                        <apex:column value="{!out_table[key]}" headerValue="Value"/>   
+                    </apex:pageBlockTable>
+                    
+              
+            </apex:pageBlock>
+        </apex:form>
+    </apex:page>

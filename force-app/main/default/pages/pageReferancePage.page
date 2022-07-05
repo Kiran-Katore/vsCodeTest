@@ -1,0 +1,10 @@
+<apex:page controller="pageRefController">
+    <apex:sectionHeader title="Page Reference"/>
+    <apex:form >
+    <apex:pageBlock title="Ref Block">
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Next" action="{!callPage}"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

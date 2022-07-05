@@ -1,0 +1,14 @@
+<apex:page standardController="account" recordSetVar="accs">
+    <apex:dataTable border="2px" value="{!accs}" var="acc">
+        <apex:column >
+            <apex:facet name="header">
+                ID
+            </apex:facet>
+            <apex:outputText >{!acc.id}</apex:outputText>
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">Name</apex:facet>
+            <apex:outputText >{!acc.name}</apex:outputText>
+        </apex:column>
+    </apex:dataTable>
+</apex:page>

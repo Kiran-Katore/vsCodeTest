@@ -1,0 +1,27 @@
+public class SendAttachment {
+    public string toMail {set;get;}
+    public string body {set;get;}
+    public string subject {set;get;}
+    
+    public void sendMail(){
+        Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+        list<string> tomails = new list<string>{tomail};
+        mail.setToAddresses(tomails);
+        mail.setPlainTextBody(body);
+        mail.setSubject(subject);
+        string pdfBody = '<h1 style="text-align: center;"><span style="text-decoration: underline;"><strong>Requirement Details</strong></span></h1><p style="text-align: center;">&nbsp;</p><table style="height: 184px; width: 952px; margin-left: auto; margin-right: auto;" border="2" cellspacing="2" cellpadding="5"><tbody><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;"><h4><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Name</strong></h4></td><td style="width: 594.975px; height: 16px;"><h4><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Value</strong></h4></td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Code</td><td style="width: 594.975px; height: 16px;">Test</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">BD Delivery</td><td style="width: 594.975px; height: 16px;">Test</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Shared By</td><td style="width: 594.975px; height: 16px;">Test</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Name of the Client</td><td style="width: 594.975px; height: 16px;">Test</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Type of engagement</td><td style="width: 594.975px; height: 16px;">Test</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Shift</td><td style="width: 594.975px; height: 16px;">Test</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Location</td><td style="width: 594.975px; height: 16px;">Test</td></tr><tr style="height: 16.075px;"><td style="width: 341.025px; height: 16.075px;">&nbsp;No. of positions</td><td style="width: 594.975px; height: 16.075px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">&nbsp;Duration</td><td style="width: 594.975px; height: 16px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Skills Required&nbsp;</td><td style="width: 594.975px; height: 16px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">&nbsp;Role</td><td style="width: 594.975px; height: 16px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">&nbsp;Experience/Level</td><td style="width: 594.975px; height: 16px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">&nbsp;Client Point of Contact</td><td style="width: 594.975px; height: 16px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">&nbsp;Project type</td><td style="width: 594.975px; height: 16px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">&nbsp;Domain</td><td style="width: 594.975px; height: 16px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Expected Lead time for profile&nbsp;</td><td style="width: 594.975px; height: 16px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Expected Start Date</td><td style="width: 594.975px; height: 16px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Level of resources</td><td style="width: 594.975px; height: 16px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Version of Tools</td><td style="width: 594.975px; height: 16px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Platform</td><td style="width: 594.975px; height: 16px;">&nbsp;</td></tr><tr style="height: 16px;"><td style="width: 341.025px; height: 16px;">Job Details</td><td style="width: 594.975px; height: 16px;"><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></td></tr></tbody></table><p>&nbsp;</p><p>*Auto Generated</p>';
+        //string pd = '<h1 style="color: #5e9ca0; text-align: center;"><span style="color: #333333;">Requirement Details</span></h1> <p>&nbsp;</p> <p>*Auto Generated Requirement</p> <p>&nbsp;</p>';
+        blob attachment = blob.toPdf(pdfBody);
+        list<Messaging.EmailFileAttachment> attach = new list<Messaging.EmailFileAttachment>();
+        Messaging.EmailFileAttachment at = new Messaging.EmailFileAttachment();
+        at.setfilename('Requirement');
+        at.setBody(attachment);
+        at.setContentType('application/pdf');
+        attach.add(at);
+        mail.setFileAttachments(attach);
+        list<Messaging.SingleEmailMessage> msg = new list<Messaging.SingleEmailMessage>();
+        msg.add(mail);
+        Messaging.SendEmailResult[] rs = Messaging.sendEmail(msg);
+        system.debug('result mail : '+rs);
+    }
+}

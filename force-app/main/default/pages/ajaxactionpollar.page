@@ -1,0 +1,22 @@
+<apex:page controller="ajaxactionpollarController">
+  <apex:sectionHeader title="Timer"/>
+  <apex:form >
+      <apex:pageBlock title="Set Time">
+          <apex:pageBlockSection >
+              <apex:inputText label="Enter Min: " html-placeholder="mins" value="{!time_value}"/>
+              <apex:commandButton value="Start" action="{!changeStart}"/>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+      <apex:pageBlock title="Counter">
+      <apex:actionPoller action="{!featchTime}" interval="5" reRender="time" enabled="{!start_counter}"/>
+          <apex:pageBlockSection id="time">          
+              <center>
+              <apex:outputText id="rem_time">
+                  <h1>{!value} Seconds</h1>
+              </apex:outputText>
+              </center>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+  
+  </apex:form>
+</apex:page>
